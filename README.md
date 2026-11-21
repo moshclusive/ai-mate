@@ -1,19 +1,19 @@
-# AI Mate — Smart Assistant for AI Chats
+# AI Mate - Smart Assistant for AI Chats
 
-> A Chrome extension (Manifest V3, v2.0.0) that puts ChatGPT, Gemini, DeepSeek, and Kimi in one side panel — and lets you send any selected text to them from any web page.
+> A Chrome extension (Manifest V3, v2.0.0) that puts ChatGPT, Gemini, DeepSeek, and Kimi in one side panel - and lets you send any selected text to them from any web page.
 
 ## ✨ Features
 
-- **Side panel with four AI chats** — ChatGPT, Gemini, DeepSeek, and Kimi, each in its own tab inside Chrome's side panel. The real site loads in the panel, so you stay logged in as usual.
-- **Floating widget** — Select text on any web page and a small floating icon appears. Click it to open a compact panel with a prompt picker and a text box.
-- **Prompt library** — Eight built-in prompts for freelance client work (Bangla summary, client message reply, explain like I'm five, improve English, translate for client, and more). Add, edit, and delete your own prompts in Settings; they sync with your Chrome account.
-- **Send to AI Mate** — Right-click selected text or an image and send it straight to AI Mate.
-- **Smart insertion** — When the panel is open, AI Mate finds the chat input box on the AI site and inserts your selected text, or a prompt plus the selected text, for you.
-- **Keyboard shortcut** — `Alt+A` (Mac: `Cmd+Shift+A`) toggles the floating menu.
+- **Side panel with four AI chats** - ChatGPT, Gemini, DeepSeek, and Kimi, each in its own tab inside Chrome's side panel. The real site loads in the panel, so you stay logged in as usual.
+- **Floating widget** - Select text on any web page and a small floating icon appears. Click it to open a compact panel with a prompt picker and a text box.
+- **Prompt library** - Eight built-in prompts for freelance client work (Bangla summary, client message reply, explain like I'm five, improve English, translate for client, and more). Add, edit, and delete your own prompts in Settings; they sync with your Chrome account.
+- **Send to AI Mate** - Right-click selected text or an image and send it straight to AI Mate.
+- **Smart insertion** - When the panel is open, AI Mate finds the chat input box on the AI site and inserts your selected text, or a prompt plus the selected text, for you.
+- **Keyboard shortcut** - `Alt+A` (Mac: `Cmd+Shift+A`) toggles the floating menu.
 
 ## 📥 Install
 
-There is no installer — this is a Chrome extension you load unpacked:
+There is no installer - this is a Chrome extension you load unpacked:
 
 1. Download this repository (Code → Download ZIP) and extract it, or clone it:
    ```bash
@@ -35,7 +35,7 @@ Requires Chrome 114 or newer.
 ## 🔒 Privacy
 
 - AI Mate does not run its own server and does not collect your data. Prompts live in your Chrome sync storage.
-- To load the AI sites inside the side panel, the extension removes the sites' frame-blocking response headers (`X-Frame-Options`, `Frame-Options`, `Content-Security-Policy`) for those sites only, using one `declarativeNetRequest` rule (`rules.json`). That is the core trick that makes the panel work — and it means the extension needs broad host access (`<all_urls>`) for its content script.
+- To load the AI sites inside the side panel, the extension removes the sites' frame-blocking response headers (`X-Frame-Options`, `Frame-Options`, `Content-Security-Policy`) for those sites only, using one `declarativeNetRequest` rule (`rules.json`). That is the core trick that makes the panel work - and it means the extension needs broad host access (`<all_urls>`) for its content script.
 - The AI sites' own terms of service and login still apply. AI Mate is not affiliated with OpenAI, Google, DeepSeek, or Moonshot.
 
 ## 🤝 Contributing
@@ -44,11 +44,11 @@ Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for how to for
 
 ## 📄 License
 
-Source-available under the **PolyForm Noncommercial License 1.0.0** — free for personal, non-commercial use. You may use it, share it, and contribute improvements, but you may **not** sell it or claim it as your own. See [LICENSE](LICENSE).
+Source-available under the **PolyForm Noncommercial License 1.0.0** - free for personal, non-commercial use. You may use it, share it, and contribute improvements, but you may **not** sell it or claim it as your own. See [LICENSE](LICENSE).
 
 ## 👤 Author
 
-**Moshiur Rahman ([@moshclusive](https://github.com/moshclusive))** — Graphic Designer, Fiverr Level 2 Seller, tool builder.
+**Moshiur Rahman ([@moshclusive](https://github.com/moshclusive))** - Graphic Designer, Fiverr Level 2 Seller, tool builder.
 
 - LinkedIn: https://www.linkedin.com/in/moshclusive/
 - Facebook: https://www.facebook.com/moshclusive
