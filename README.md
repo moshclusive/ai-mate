@@ -1,5 +1,7 @@
 # AI Mate - Smart Assistant for AI Chats
 
+<p align="center"><img src="assets/icon.png" alt="ai-mate logo" width="128"></p>
+
 > A Chrome extension (Manifest V3, v2.0.0) that puts ChatGPT, Gemini, DeepSeek, and Kimi in one side panel - and lets you send any selected text to them from any web page.
 
 ## ✨ Features
