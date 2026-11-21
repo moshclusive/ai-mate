@@ -1,0 +1,111 @@
+{
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Open AI Mate Settings"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "open_floating_menu": {
+      "description": "Open AI Mate Floating Menu",
+      "suggested_key": {
+        "default": "Alt+A",
+        "mac": "Command+Shift+A"
+      }
+    }
+  },
+  "content_scripts": [
+    {
+      "exclude_matches": [
+        "https://chatgpt.com/*",
+        "https://chat.openai.com/*",
+        "https://gemini.google.com/*",
+        "https://chat.deepseek.com/*",
+        "https://www.kimi.com/*",
+        "https://kimi.moonshot.cn/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    },
+    {
+      "all_frames": true,
+      "js": [
+        "ai_content.js"
+      ],
+      "matches": [
+        "https://chatgpt.com/*",
+        "https://chat.openai.com/*",
+        "https://gemini.google.com/*",
+        "https://chat.deepseek.com/*",
+        "https://www.kimi.com/*",
+        "https://kimi.moonshot.cn/*"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "enabled": true,
+        "id": "rules_1",
+        "path": "rules.json"
+      }
+    ]
+  },
+  "description": "Professional persistent side panel assistant for multiple AI platforms.",
+  "host_permissions": [
+    "https://chatgpt.com/*",
+    "https://chat.openai.com/*",
+    "https://gemini.google.com/*",
+    "https://chat.deepseek.com/*",
+    "https://www.kimi.com/*",
+    "https://kimi.moonshot.cn/*"
+  ],
+  "icons": {
+    "128": "assets/icon.png",
+    "16": "assets/icon.png",
+    "48": "assets/icon.png"
+  },
+  "manifest_version": 3,
+  "minimum_chrome_version": "114",
+  "name": "AI Mate - Smart Assistant",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "contextMenus",
+    "sidePanel",
+    "declarativeNetRequest",
+    "declarativeNetRequestWithHostAccess",
+    "clipboardRead"
+  ],
+  "short_name": "AI Mate",
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "version": "2.0.0",
+  "web_accessible_resources": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "resources": [
+        "assets/small-icon.png",
+        "assets/chatgpt.png",
+        "assets/gemini.png",
+        "assets/deepseek.png",
+        "assets/kimi.png",
+        "assets/settings.png",
+        "assets/add.png",
+        "assets/delete.png",
+        "floating.html",
+        "floating.js"
+      ]
+    }
+  ]
+}

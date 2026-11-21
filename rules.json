@@ -1,0 +1,36 @@
+[
+  {
+    "action": {
+      "responseHeaders": [
+        {
+          "header": "X-Frame-Options",
+          "operation": "remove"
+        },
+        {
+          "header": "Frame-Options",
+          "operation": "remove"
+        },
+        {
+          "header": "Content-Security-Policy",
+          "operation": "remove"
+        }
+      ],
+      "type": "modifyHeaders"
+    },
+    "condition": {
+      "requestDomains": [
+        "chatgpt.com",
+        "openai.com",
+        "google.com",
+        "deepseek.com",
+        "kimi.com",
+        "moonshot.cn"
+      ],
+      "resourceTypes": [
+        "sub_frame"
+      ]
+    },
+    "id": 1,
+    "priority": 1
+  }
+]

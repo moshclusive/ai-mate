@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Mate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body, html { margin: 0; padding: 0; height: 100%; background: #ffffff; font-family: 'Inter', sans-serif; overflow: hidden; display: flex; flex-direction: column;}
+        
+        .sp-header {
+            display: flex; justify-content: space-between; align-items: center; 
+            background: #fafafa; border-bottom: 1px solid #e4e4e7; padding: 8px 12px;
+            flex-shrink: 0;
+        }
+        
+        .sp-tabs { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; }
+        .sp-tabs::-webkit-scrollbar { display: none; }
+        
+        .sp-tab {
+            background: transparent; border: none; padding: 6px 10px; border-radius: 6px;
+            font-size: 12px; font-weight: 500; color: #71717a; cursor: pointer;
+            transition: all 0.2s ease; font-family: inherit;
+        }
+        .sp-tab:hover { background: #e4e4e7; color: #09090b; }
+        .sp-tab.active { background: #09090b; color: #ffffff; }
+
+        .sp-reload {
+            background: transparent; border: none; color: #71717a; cursor: pointer;
+            padding: 6px; border-radius: 6px; transition: all 0.2s ease; display: flex;
+        }
+        .sp-reload:hover { background: #e4e4e7; color: #09090b; }
+        
+        #loader-container {
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            height: 100%; width: 100%; position: absolute; top: 0; left: 0; z-index: 10; background: #ffffff;
+        }
+        
+        .spinner {
+            width: 24px; height: 24px; border: 2px solid #e4e4e7; border-top: 2px solid #09090b;
+            border-radius: 50%; animation: spin 0.8s linear infinite; margin-bottom: 16px;
+        }
+        
+        p { color: #52525b; font-size: 13px; font-weight: 500; }
+        
+        #aiFrame {
+            width: 100%; height: 100%; flex-grow: 1; border: none; position: relative; z-index: 20; 
+            display: none; background: transparent; transition: opacity 0.3s ease;
+        }
+
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
+</head>
+<body>
+    <div class="sp-header">
+        <div class="sp-tabs" id="tabContainer">
+            <button class="sp-tab active" data-site="chatgpt">GPT</button>
+            <button class="sp-tab" data-site="gemini">Gemini</button>
+            <button class="sp-tab" data-site="deepseek">DeepSeek</button>
+            <button class="sp-tab" data-site="kimi">Kimi</button>
+        </div>
+        <button class="sp-reload" id="reloadBtn" title="Reload AI">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+        </button>
+    </div>
+
+    <div id="loader-container">
+        <div class="spinner"></div>
+        <p>Connecting</p>
+    </div>
+    
+    <iframe id="aiFrame" allow="clipboard-read; clipboard-write; microphone"></iframe>
+    
+    <script src="sidepanel.js"></script>
+</body>
+</html>
